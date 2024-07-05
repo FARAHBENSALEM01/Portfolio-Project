@@ -28,21 +28,6 @@ SELECT *
 FROM layoffs_copy2
 WHERE percentage_laid_off = 1;
 
--- total employees
-
-WITH employee_CTE AS
-(
-SELECT company, YEAR(`date`) Year , total_laid_off, percentage_laid_off, (total_laid_off/(percentage_laid_off/100)) Total_employees
-FROM layoffs_copy2
-where (total_laid_off IS NOT NULL
-AND percentage_laid_off IS NOT NULL)
-AND YEAR(date) IS NOT NULL
-ORDER BY YEAR(`date`) ASC, total_laid_off DESC
-)
-SELECT company, Year, total_laid_off, percentage_laid_off, ROUND(Total_employees, 0) AS rounded_Total_employees
-FROM employee_CTE
-where ROUND(Total_employees, 0) IS NOT NULL
-ORDER BY rounded_Total_employees;
 
 
 -- These Companies must be Startups to lay off all these employees,
@@ -155,6 +140,23 @@ ORDER BY dates ASC
 SELECT dates, total_laid_off, SUM(total_laid_off) OVER (ORDER BY dates ASC) as rolling_total_layoffs
 FROM DATE_CTE
 ORDER BY dates ASC;
+
+-- total employees
+
+WITH employee_CTE AS
+(
+SELECT company, YEAR(`date`) Year , total_laid_off, percentage_laid_off, (total_laid_off/(percentage_laid_off/100)) Total_employees
+FROM layoffs_copy2
+where (total_laid_off IS NOT NULL
+AND percentage_laid_off IS NOT NULL)
+AND YEAR(date) IS NOT NULL
+ORDER BY YEAR(`date`) ASC, total_laid_off DESC
+)
+SELECT company, Year, total_laid_off, percentage_laid_off, ROUND(Total_employees, 0) AS rounded_Total_employees
+FROM employee_CTE
+where ROUND(Total_employees, 0) IS NOT NULL
+ORDER BY rounded_Total_employees;
+
   
 
 
