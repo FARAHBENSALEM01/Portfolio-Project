@@ -1,6 +1,6 @@
 /*
 
-Cleaning Data in SQL Queries
+Cleaning Data in SQL Queries (using Sql server management studio 20)
 
 */
 
