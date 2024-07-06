@@ -1,4 +1,4 @@
--- Data Cleaning
+-- Data Cleaning using (MySQL workbench 8.0 CE)
 -- 1 Remove Duplicates
 -- 2 Standardize the Data
 -- 3 Null Values or Blank Values
