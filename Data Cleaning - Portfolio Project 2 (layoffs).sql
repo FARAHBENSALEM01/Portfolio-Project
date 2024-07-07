@@ -116,7 +116,7 @@ SELECT DISTINCT(industry)
 FROM layoffs_copy2
 order by 1;
 
--- I also noticed the Crypto has multiple different variations. We need to standardize that - let's say all to Crypto
+-- I also noticed the Crypto has multiple different variations. We need to standardize that - let's set all to Crypto
 
 SELECT *
 FROM layoffs_copy2
