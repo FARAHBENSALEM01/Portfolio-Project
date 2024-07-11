@@ -1,3 +1,5 @@
+-- Exploratory Data Analysis
+/*Here we are going to explore the Data and see what will help us to answer our insights */
 CREATE TABLE appleStore_description_combined AS
 
 SELECT *
@@ -23,7 +25,7 @@ UNION ALL
 SELECT *
 FROM appleStore_description4
 
--- 1) check the the number of unique ids in both tables (appleApple_Store & appleappleStore_description_combined)
+-- 1) explore the number of unique id's in both tables (appleApple_Store & appleappleStore_description_combined).
 
 -- Apple_Store:
 
@@ -35,21 +37,21 @@ FROM Apple_Store;
 SELECT COUNT(DISTINCT id) AS UNIQUEAPPIDS
 FROM appleStore_description_combined;
 
--- 2) check for any missin values in key columnsApple_Store
+-- 2) looking for any missing values in key columns.
 
 -- Apple_Store:
 
-SELECT COUNT(*) AS MISSINGVALUES
+SELECT COUNT(*) AS MISSING_VALUES
 FROM Apple_Store
 WHERE track_name IS NULL OR user_rating IS NULL OR prime_genre IS NULL;
 
 -- appleStore_description_combined:
 
-SELECT COUNT(*) AS MISSINGVALUES
+SELECT COUNT(*) AS MISSIN_GVALUES
 FROM appleStore_description_combined
 WHERE track_name IS NULL OR app_desc IS NULL;
 
--- 3) LOOKING FOR THE NUMBER OF APPS PER GENRE
+-- 3) LOOKING FOR THE NUMBER OF APPS PER GENRE.
 
 -- Apple_Store:
 
@@ -62,13 +64,13 @@ ORDER BY Countapps DESC;
 
 SELECT
 	MAX(user_rating) AS MAX_rating,
-    MIN(user_rating) AS MIN_rating,
-    AVG(user_rating) AS AVG_rating
+	MIN(user_rating) AS MIN_rating,
+	AVG(user_rating) AS AVG_rating
 FROM Apple_Store;  
   
 -- Insights
 
--- 1) determine whether the paid apps rating is higher than the free apps 
+-- 1) find out whether the paid apps rating is higher than the free apps.
 
 SELECT 
 CASE
@@ -79,7 +81,7 @@ END AS APPS_RATING,
 FROM Apple_Store
 GROUP BY APPS_RATING;
 
--- 2) looking if Apps with more supported languages have higher ratings 
+-- 2) looking if Apps with more supported languages have higher ratings.
 
 SELECT 
 CASE
@@ -107,10 +109,10 @@ so there might be good opportunity to create an app in this categories */
 SELECT 
 CASE
 	WHEN length(app_desc) < 500 THEN 'Short'
-    WHEN length(app_desc) BETWEEN 500 AND 1000 THEN 'Medium'
-    ELSE 'Long' 
+	WHEN length(app_desc) BETWEEN 500 AND 1000 THEN 'Medium'
+	ELSE 'Long' 
 END AS DESC_LENGTH, 
-    AVG(user_rating) AS AVG_Rating
+	AVG(user_rating) AS AVG_Rating
 FROM Apple_Store
 JOIN appleStore_description_combined
 ON Apple_Store.id = appleStore_description_combined.id
@@ -119,10 +121,7 @@ ORDER BY AVG_Rating ASC;
 
 /* THE LONGER THE DESCRIPTION THE HIGHER THE RATING*/ 
 
--- 5) looking for the top_rated App for each genre, which mean we need the rank
-
-
-/**/
+-- 5) looking for the top_rated App for each genre, which means we need the rank
 
 WITH TOP_RATED_APPS AS
 (
