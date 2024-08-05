@@ -15,6 +15,50 @@ WHERE (driverref = 'max_verstappen'
 AND year = 2023)
 AND wins>0;
 
+-- lets look for duplicates in results table
+ select* from results
+
+ WITH RowNumCTE AS(
+Select *,
+	ROW_NUMBER() OVER (
+	PARTITION BY resultid,
+		     driverid
+		     ORDER BY
+		     resultid
+		     ) row_num
+
+From results
+--order by ParcelID
+)
+Select *
+From RowNumCTE
+Where row_num > 1
+Order by resultid;
+
+select *
+from results
+where driverid = 1
+and raceid= 18;
+
+ -- Remove duplicates from results table
+
+ WITH RowNumCTE AS(
+Select *,
+	ROW_NUMBER() OVER (
+	PARTITION BY resultid,
+	 	     driverid
+		     ORDER BY
+		     resultid
+		     ) row_num
+
+From results
+--order by ParcelID
+)
+Delete
+From RowNumCTE
+Where row_num > 1;
+
+
 /* how many years max participate in Formula 1*/ 
 
 SELECT COUNT(DISTINCT(year))
