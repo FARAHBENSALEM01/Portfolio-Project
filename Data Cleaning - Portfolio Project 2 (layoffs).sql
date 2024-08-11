@@ -1,3 +1,20 @@
+
+-- 1) Situation:
+-- working on an data cleaning of worldwide company layoffs
+-- The dataset, sourced from Kaggle, included information on the number of people laid off across different companies and industries.
+--2) Task:
+-- cleaning and preprocess the dataset using SQL.
+-- I  aimed to handle NULL values, remove duplicates, standardize data formats, and improve data quality.
+--3) Action:
+-- Here are the actions I took:
+-- Wrote SQL scripts to remove duplicate entries and maintain data integrity.
+-- Standardized data by addressing issues (e.g., converting data types).
+-- Handled NULL and blank values appropriately.
+-- Removed unnecessary columns to streamline the dataset.
+-- 4) Result:
+-- The cleaned dataset was ready for further analysis.
+-- My SQL skills ensured data quality and consistency.
+
 -- Data Cleaning using (MySQL workbench 8.0 CE)
 -- 1 Remove Duplicates
 -- 2 Standardize the Data
