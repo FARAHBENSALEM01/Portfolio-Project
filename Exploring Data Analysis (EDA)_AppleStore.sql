@@ -20,6 +20,7 @@
 -- Finance and book apps exhibit lower average ratings.
 -- App descriptions’ length correlates with user ratings.
 -- Aspiring developers should aim for an average rating above 3.5.
+-- Games and entertainment genres face high competition.
 
 /*Here we are going to explore the Data and see what will help us to answer our insights */
 CREATE TABLE appleStore_description_combined AS
