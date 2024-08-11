@@ -1,3 +1,21 @@
+-- 1) Situation:
+-- exploring Formula 1 World Championship data from 1950 to 2024.
+-- The dataset includes race results, driver statistics, Constructors information, and circuit details.
+-- 2) Task:
+-- Explore the data using SQL queries.
+-- uncover insights related to driver performance, historical trends.
+-- 3) Action:
+-- Here are the actions I took:
+-- Cleaned and organized the raw data.
+-- Designed a relational database using SQL.
+-- Crafted SQL queries to extract meaningful insights.
+-- Explored aspects like driver performance and track statistics.
+-- 4) Result:
+-- My analysis provides valuable insights into the thrilling world of Formula 1 racing.
+-- Interactive dashboards and reports enhance the fan experience. in (Tableau)
+-- Combining SQL skills with data visualization unlocks dynamic sports insights.
+
+
 /* Exploring Data Analysis */
 
 select* 
