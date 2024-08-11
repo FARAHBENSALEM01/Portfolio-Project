@@ -1,3 +1,23 @@
+-- 1) Situation:
+-- working on a project related to COVID-19 Exploring data analysis using SQL queries.
+-- The dataset included information on COVID-19 cases, deaths, population, and vaccinations.
+-- 2) Task:
+-- analyze infection rates, death rates, and vaccination progress.
+-- The challenge was to extract meaningful insights from the data.
+-- 3) Action:
+-- Here are the actions I took:
+-- Utilized advanced SQL techniques, including joins, CTEs, and temp tables.
+-- Created SQL queries to calculate infection rates, death rates, and vaccination progress.
+-- Explored global and continent-wise statistics.
+-- Derived insights from the data using various SQL skills.
+-- Customized queries as needed.
+-- 4) Result:
+-- The project provided valuable insights into COVID-19 trends.
+-- It showcased infection rates, death tolls, and vaccination progress.
+-- My SQL queries offered a holistic view of the pandemic landscape.
+
+/*Let's Start*/
+
 --Covid Deaths Data Exploration
 Select *
 From PortfolioProject..CovidDeaths
