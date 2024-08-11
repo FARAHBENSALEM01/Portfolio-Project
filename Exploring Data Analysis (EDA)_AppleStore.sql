@@ -1,4 +1,26 @@
 -- Exploratory Data Analysis
+
+-- 1) Situation:
+--  working on an exploratory data analysis (EDA) project using Apple Store Apps data.
+-- The dataset included information about various mobile apps available on the Apple Store.
+-- 2) Task:
+-- My specific task was to gain insights from the dataset using SQL queries.
+-- I wanted to explore app genres, ratings, and other relevant factors.
+-- 3) Action:
+-- Here are the actions I took:
+-- Leveraged SQL techniques to analyze the data.
+-- Checked for missing values in key Columns.
+-- Explored the NUMBER OF APPS PER GENRE.
+-- Reviewed app ratings and other relevant features.
+-- looking if there is a correlation between the Length of the App Description and the user_ratings 
+-- 4) Result:
+-- Key insights from my analysis:
+-- Paid apps tend to have higher ratings than free apps.
+-- Apps supporting 10-30 languages achieve better ratings.
+-- Finance and book apps exhibit lower average ratings.
+-- App descriptions’ length correlates with user ratings.
+-- Aspiring developers should aim for an average rating above 3.5.
+
 /*Here we are going to explore the Data and see what will help us to answer our insights */
 CREATE TABLE appleStore_description_combined AS
 
