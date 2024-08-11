@@ -1,4 +1,21 @@
 -- Exploratory Data Analysis
+
+-- 1) Situation:
+-- working on an exploratory data analysis of worldwide company layoffs.
+-- The dataset, sourced from Kaggle, included information such as company name, location, industry, total laid off, percentage laid off, date of layoffs, company stage, country, and funds raised.
+-- 2) Task:
+-- The specific task was to uncover trends and insights in the layoff data across different industries and regions.
+-- I aimed to explore patterns related to layoffs during this period.
+-- 3) Action:
+-- Here are the actions I took:
+-- After cleaning the Data before, I Conducted exploratory data analysis (EDA) to identify key trends.
+-- Explored factors such as industry, location, and company stage.
+-- Calculated metrics like total layoffs and percentage laid off.
+-- 4) Result:
+-- The analysis provided insights into layoffs across industries and locations.
+-- Time-Series Analysis, Calculate rolling totals of layoffs per month
+-- The project showcased your data EDA skills.
+
 -- Here we are going to explore the Data and see what will help us to analyse 
 
 SELECT *
