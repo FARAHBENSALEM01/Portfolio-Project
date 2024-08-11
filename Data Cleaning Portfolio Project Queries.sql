@@ -1,3 +1,30 @@
+
+-- 1) Situation:
+-- working with the Nashville housing dataset.
+-- The goal was to clean and standardize the data in the NashvilleHousing table using SQL queries.
+-- Key tasks included handling date formats, populating missing property addresses, breaking down address information, and removing duplicates.
+-- 2) Action:
+-- Wrote SQL scripts to remove duplicate entries.
+-- Standardized data by addressing issues.
+-- Removed unnecessary columns to streamline the dataset.
+-- 3) Task:
+-- Standardize Date Format:
+-- Converted the SaleDate column to a date format.
+-- Populating Property Address Data:
+-- Retrieved records with missing PropertyAddress.
+-- Populated missing addresses using available records with the same ParcelID.
+-- Breaking out Address:
+ -- Breaking out Address into Individual Columns (Address, City, State)
+-- Change ‘Y’ and ‘N’ to ‘Yes’ and ‘No’:
+-- Updated the SoldAsVacant field for clarity.
+-- Removing Duplicates:
+-- Identified and removed duplicate records based on specific columns.
+-- Deleting Unused Columns:
+-- Streamlined the data structure by removing unnecessary columns.
+-- 4) Result:
+-- The cleaned dataset is now accurate, consistent, and ready for further analysis.
+
+
 /*
 
 Cleaning Data in SQL Queries (using Sql server management studio 20)
